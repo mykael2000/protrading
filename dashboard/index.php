@@ -71,7 +71,7 @@ require('header.php');
                 
                 <div class="flex flex-col">
                     <div class="flex items-center mb-2">
-                        <h3 id="balanceAmount" class="text-2xl sm:text-3xl font-bold dark:text-white text-dark mr-2">$<?php echo number_format($user['balance'],',','.'); ?></h3>
+                        <h3 id="balanceAmount" class="text-2xl sm:text-3xl font-bold dark:text-white text-dark mr-2">$<?php echo number_format($user['balance'], 2 ,',','.'); ?></h3>
                         <h3 id="hiddenBalance" class="text-2xl sm:text-3xl font-bold dark:text-white text-dark mr-2 hidden">••••••</h3>
                     </div>
                     <div class="flex items-center text-secondary bg-secondary/10 px-2 py-1 rounded-full text-xs w-fit mb-3">
