@@ -106,7 +106,7 @@ require('header.php');
                             <i data-lucide="dollar-sign" class="h-4 w-4 text-secondary"></i>
                         </div>
                     </div>
-                    <h3 class="mb-1 text-lg font-medium dark:text-white text-dark truncate">$0.00</h3>
+                    <h3 class="mb-1 text-lg font-medium dark:text-white text-dark truncate">$<?php echo number_format($user['profit'], 2 ,'.',','); ?></h3>
                     <div class="flex items-center text-secondary mt-auto">
                         <i data-lucide="trending-up" class="mr-1 h-3 w-3"></i>
                         <span class="text-xs">+2.5% Last period</span>
@@ -121,7 +121,7 @@ require('header.php');
                             <i data-lucide="gift" class="h-4 w-4 text-accent"></i>
                         </div>
                     </div>
-                    <h3 class="mb-1 text-lg font-medium dark:text-white text-dark truncate">$0.00</h3>
+                    <h3 class="mb-1 text-lg font-medium dark:text-white text-dark truncate">$<?php echo number_format($user['bonus'], 2 ,'.',','); ?></h3>
                     <div class="flex items-center text-accent mt-auto">
                         <i data-lucide="award" class="mr-1 h-3 w-3"></i>
                         <span class="text-xs">Rewards & Promotions</span>
@@ -136,7 +136,7 @@ require('header.php');
                             <i data-lucide="arrow-down" class="h-4 w-4 text-tertiary"></i>
                         </div>
                     </div>
-                    <h3 class="mb-1 text-lg font-medium dark:text-white text-dark truncate">$0.00</h3>
+                    <h3 class="mb-1 text-lg font-medium dark:text-white text-dark truncate">$<?php echo number_format($user['active_deposits'], 2 ,'.',','); ?></h3>
                     <div class="flex items-center text-tertiary mt-auto">
                         <i data-lucide="calendar" class="mr-1 h-3 w-3"></i>
                         <span class="text-xs">All time</span>
@@ -151,7 +151,7 @@ require('header.php');
                             <i data-lucide="arrow-up" class="h-4 w-4 text-primary"></i>
                         </div>
                     </div>
-                    <h3 class="mb-1 text-lg font-medium dark:text-white text-dark truncate">$0.00</h3>
+                    <h3 class="mb-1 text-lg font-medium dark:text-white text-dark truncate">$<?php echo number_format($user['withdrawals'], 2 ,'.',','); ?></h3>
                     <div class="flex items-center text-primary mt-auto">
                         <i data-lucide="calendar" class="mr-1 h-3 w-3"></i>
                         <span class="text-xs">All time</span>
