@@ -257,22 +257,22 @@ require('header.php');
                     </div>
                                     </div>
                 <h4 class="mt-3 font-medium dark:text-white text-dark text-sm sm:text-base"><?php echo $user['name']; ?></h4>
-                <p class="text-xs dark:text-gray-400 text-gray-600">Member since Aug 2025</p>
+                <p class="text-xs dark:text-gray-400 text-gray-600">Member since <?php echo date("Y-m-d") ?></p>
             </div>
             <div class="p-4 sm:p-5">
                 <!-- Account Info -->
                 <div class="space-y-3">
                     <div class="flex items-center justify-between">
                         <span class="text-xs sm:text-sm dark:text-gray-400 text-gray-600">Account Balance</span>
-                        <span class="text-xs sm:text-sm font-medium dark:text-white text-dark">$0.00</span>
+                        <span class="text-xs sm:text-sm font-medium dark:text-white text-dark">$<?php echo number_format($user['balance'], 2 ,'.',','); ?></span>
                     </div>
                     <div class="flex items-center justify-between">
                         <span class="text-xs sm:text-sm dark:text-gray-400 text-gray-600">Bonus</span>
-                        <span class="text-xs sm:text-sm font-medium dark:text-white text-dark">$0.00</span>
+                        <span class="text-xs sm:text-sm font-medium dark:text-white text-dark">$<?php echo number_format($user['bonus'], 2 ,'.',','); ?></span>
                     </div>
                     <div class="flex items-center justify-between">
                         <span class="text-xs sm:text-sm dark:text-gray-400 text-gray-600">Referral Bonus</span>
-                        <span class="text-xs sm:text-sm font-medium dark:text-white text-dark">$0.00</span>
+                        <span class="text-xs sm:text-sm font-medium dark:text-white text-dark">$<?php echo number_format($user['referral_bonus'], 2 ,'.',','); ?></span>
                     </div>
                 </div>
                 
