@@ -71,14 +71,14 @@ require('header.php');
                 
                 <div class="flex flex-col">
                     <div class="flex items-center mb-2">
-                        <h3 id="balanceAmount" class="text-2xl sm:text-3xl font-bold dark:text-white text-dark mr-2">$0.00</h3>
+                        <h3 id="balanceAmount" class="text-2xl sm:text-3xl font-bold dark:text-white text-dark mr-2">$<?php echo $user['balance']; ?></h3>
                         <h3 id="hiddenBalance" class="text-2xl sm:text-3xl font-bold dark:text-white text-dark mr-2 hidden">••••••</h3>
                     </div>
                     <div class="flex items-center text-secondary bg-secondary/10 px-2 py-1 rounded-full text-xs w-fit mb-3">
                         <i data-lucide="check-circle" class="h-3 w-3 mr-1"></i>
                         <span>Available for Withdrawal</span>
                     </div>
-                    <p class="text-xs dark:text-gray-400 text-gray-600 mb-4">Last updated: Aug 05, 2025 01:24 AM</p>
+                    <p class="text-xs dark:text-gray-400 text-gray-600 mb-4">Last updated: <?php if(!empty($user['balance_update'])){echo $user['balance_update'];}else{echo date("l, F d, Y h:i:s A");} ?>/p>
                     
                     <div class="mt-auto flex gap-2">
                         <a href="deposits.php" class="dark:bg-dark-100 bg-light-200 hover:bg-light-200/70 dark:hover:bg-dark-100/70 dark:text-white text-dark text-xs font-medium px-3 py-1.5 rounded-lg transition-colors flex items-center gap-1 flex-1 justify-center">
