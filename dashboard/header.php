@@ -682,14 +682,14 @@ require("function.php");
                 </div>
                 
                 <div class="py-2 dark:border-dark-100 border-light-200 border-t">
-                    <a href="https://clientarea.protradingoptions.com/logout" 
+                    <a href="logout.php" 
                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
                        class="flex items-center gap-2 px-4 py-2 text-sm text-danger dark:hover:bg-dark-100/60 hover:bg-light-200/60 transition-colors">
                         <i class="fas fa-sign-out-alt h-4 w-4"></i>
                         <span>Logout</span>
                     </a>
                     
-                    <form id="logout-form" action="https://clientarea.protradingoptions.com/logout" method="POST" class="hidden">
+                    <form id="logout-form" action="logout.php" method="POST" class="hidden">
                         <input type="hidden" name="_token" value="cnu2sqNcMeHm3RGT0DpQrHD8ck50tZ2ulX2ISClQ">                    </form>
                 </div>
             </div>
