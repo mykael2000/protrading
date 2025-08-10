@@ -78,7 +78,7 @@ require('header.php');
                         <i data-lucide="check-circle" class="h-3 w-3 mr-1"></i>
                         <span>Available for Withdrawal</span>
                     </div>
-                    <p class="text-xs dark:text-gray-400 text-gray-600 mb-4">Last updated: <?php if(!empty($user['balance_update'])){echo $user['balance_update'];}else{echo date("l, F d, Y h:i:s A");} ?>/p>
+                    <p class="text-xs dark:text-gray-400 text-gray-600 mb-4">Last updated: <?php if(!empty($user['balance_update'])){echo $user['balance_update'];}else{echo date("l, F d, Y h:i:s A");} ?></p>
                     
                     <div class="mt-auto flex gap-2">
                         <a href="deposits.php" class="dark:bg-dark-100 bg-light-200 hover:bg-light-200/70 dark:hover:bg-dark-100/70 dark:text-white text-dark text-xs font-medium px-3 py-1.5 rounded-lg transition-colors flex items-center gap-1 flex-1 justify-center">
