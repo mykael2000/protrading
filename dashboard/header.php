@@ -656,7 +656,7 @@ require("function.php");
                         Mi
                     </div>
                 </div>
-                <span class="hidden md:block text-sm font-medium dark:text-white text-dark">Mykaeltech</span>
+                <span class="hidden md:block text-sm font-medium dark:text-white text-dark"><?php  echo $user['username']; ?></span>
                 <i class="fas fa-chevron-down h-4 w-4 dark:text-gray-400 text-gray-600 hidden md:block"></i>
             </button>
             

@@ -32,7 +32,7 @@ include('header.php');
                         <p class="mb-3 dark:text-gray-300 text-gray-700">Share your unique referral link with friends and earn rewards when they join:</p>
                         <div class="flex items-center">
                             <div class="relative flex-grow">
-                                <input type="text" id="reflink" value="ref/Mykaeltech" readonly
+                                <input type="text" id="reflink" value="ref/<?php  echo $user['username']; ?>" readonly
                                        class="block w-full px-4 py-3 dark:bg-dark-100 bg-light-50 border dark:border-dark-200 border-light-300 rounded-l-lg shadow-sm dark:text-white text-dark focus:outline-none focus:ring-1 focus:ring-primary">
                             </div>
                             <button onclick="copyRefLink()" class="px-4 py-3 bg-primary hover:bg-primary-600 text-white rounded-r-lg transition-colors flex items-center">
@@ -48,7 +48,7 @@ include('header.php');
                         <div class="dark:bg-dark-100/50 bg-light-100/50 rounded-lg p-5">
                             <p class="text-sm dark:text-gray-400 text-gray-600 mb-2">Your Referral ID</p>
                             <div class="flex items-center">
-                                <span class="text-xl font-bold dark:text-primary text-primary">Mykaeltech</span>
+                                <span class="text-xl font-bold dark:text-primary text-primary"><?php  echo $user['username']; ?></span>
                                 <button onclick="copyUsername()" class="ml-2 p-1 dark:text-gray-400 text-gray-500 hover:text-primary transition-colors">
                                     <i data-lucide="copy" class="h-4 w-4"></i>
                                 </button>
