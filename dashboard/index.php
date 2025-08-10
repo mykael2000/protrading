@@ -42,7 +42,7 @@ require('header.php');
         <div class="mb-6 flex flex-col sm:flex-row sm:items-center sm:justify-between">
             <div>
                 <h1 class="text-xl sm:text-2xl font-bold dark:text-white text-dark">Welcome back, <?php echo $user['name']; ?>!</h1>
-                <p class="text-primary text-sm">Tuesday, August 5, 2025</p>
+                <p class="text-primary text-sm"><?php echo date("l, F d, Y h:i:s A"); ?></p>
             </div>
             <div class="mt-4 flex flex-wrap items-center gap-3 sm:mt-0">
                 <a href="deposits.php" class="flex items-center gap-2 rounded-md bg-secondary px-3 py-2 text-sm font-medium text-white hover:bg-secondary/90 transition-colors w-auto sm:w-auto shadow-lg">
