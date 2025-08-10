@@ -37,7 +37,7 @@ include('header.php');
             <!-- Glass Morphism Card -->
             <div class="dark:bg-dark-50/80 bg-light-100/80 backdrop-blur-sm border dark:border-dark-100 border-light-200 rounded-2xl p-8 relative z-10">
                 <!-- Form -->
-                <form method="POST" action="https://clientarea.protradingoptions.com/user/confirm-password" class="space-y-6">
+                <form method="POST" action="user/confirm-password" class="space-y-6">
                     <input type="hidden" name="_token" value="cnu2sqNcMeHm3RGT0DpQrHD8ck50tZ2ulX2ISClQ">                    
                     <!-- Password Field -->
                     <div class="space-y-2">

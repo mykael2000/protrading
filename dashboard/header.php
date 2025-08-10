@@ -11,7 +11,7 @@ require("function.php");
     <meta name="csrf-token" content="cnu2sqNcMeHm3RGT0DpQrHD8ck50tZ2ulX2ISClQ">
     <title>Protrading Options | Account Dashboard</title>
 
-    <link rel="icon" href="https://clientarea.protradingoptions.com/storage/app/public/photos/sRj0Ls3MPx9g7QM1XhYE6GmNA2oYzXIEHNh5aEcC.png" type="image/png" />
+    <link rel="icon" href="storage/app/public/photos/sRj0Ls3MPx9g7QM1XhYE6GmNA2oYzXIEHNh5aEcC.png" type="image/png" />
 
     <!-- Core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
@@ -147,8 +147,8 @@ require("function.php");
     <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
 
     <!-- Additional libraries that are still needed -->
-    <link rel="stylesheet" href="https://clientarea.protradingoptions.com/dash2/libs/sweetalert2/dist/sweetalert2.min.css">
-    <script src="https://clientarea.protradingoptions.com/dash2/libs/sweetalert/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="dash2/libs/sweetalert2/dist/sweetalert2.min.css">
+    <script src="dash2/libs/sweetalert/sweetalert.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.21/af-2.3.5/b-1.6.3/b-flash-1.6.3/b-html5-1.6.3/b-print-1.6.3/r-2.2.5/datatables.min.css" />
 
     <!-- Alpine.js -->
@@ -271,8 +271,8 @@ require("function.php");
     <div class="flex flex-col h-full">
         <!-- Sidebar Header with Branding -->
         <div class="flex h-16 items-center mt-4 dark:border-dark-100 border-light-200 border-b px-6">
-           <a href="https://clientarea.protradingoptions.com/dashboard" class="flex items-center gap-2 font-bold text-xl">
-            <img src="https://clientarea.protradingoptions.com/storage/app/public/photos/GJ2IpmE166NL2LRyIWRVsBRcdobsCIqfwvtnshJ2.png" alt="logo" class="h-8">
+           <a href="dashboard" class="flex items-center gap-2 font-bold text-xl">
+            <img src="storage/app/public/photos/GJ2IpmE166NL2LRyIWRVsBRcdobsCIqfwvtnshJ2.png" alt="logo" class="h-8">
         </a>
             <div class="ml-auto md:hidden">
                 <button class="dark:text-white text-dark-100 bg-transparent hover:text-primary transition-colors" id="closeSideNav">
@@ -512,7 +512,7 @@ require("function.php");
         <!-- Mobile Logo with Enhanced Appearance -->
         <div class="flex items-center gap-3 md:hidden">
             <div class="flex items-center gap-2 font-bold text-xl md:hidden">
-            <img src="https://clientarea.protradingoptions.com/storage/app/public/photos/GJ2IpmE166NL2LRyIWRVsBRcdobsCIqfwvtnshJ2.png" alt="logo" class="h-8">
+            <img src="storage/app/public/photos/GJ2IpmE166NL2LRyIWRVsBRcdobsCIqfwvtnshJ2.png" alt="logo" class="h-8">
         </div>
         </div>
     </div>

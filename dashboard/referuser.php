@@ -32,7 +32,7 @@ include('header.php');
                         <p class="mb-3 dark:text-gray-300 text-gray-700">Share your unique referral link with friends and earn rewards when they join:</p>
                         <div class="flex items-center">
                             <div class="relative flex-grow">
-                                <input type="text" id="reflink" value="https://clientarea.protradingoptions.com/ref/Mykaeltech" readonly
+                                <input type="text" id="reflink" value="ref/Mykaeltech" readonly
                                        class="block w-full px-4 py-3 dark:bg-dark-100 bg-light-50 border dark:border-dark-200 border-light-300 rounded-l-lg shadow-sm dark:text-white text-dark focus:outline-none focus:ring-1 focus:ring-primary">
                             </div>
                             <button onclick="copyRefLink()" class="px-4 py-3 bg-primary hover:bg-primary-600 text-white rounded-r-lg transition-colors flex items-center">

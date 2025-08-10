@@ -31,7 +31,7 @@
             </svg>
             
             <!-- Home -->
-            <a href="https://clientarea.protradingoptions.com/dashboard" 
+            <a href="dashboard" 
                class="flex flex-col items-center justify-center h-full w-full relative z-10 transition-all duration-200 nav-item active"
                data-index="0">
                 <div class="nav-icon-wrapper text-primary transition-all duration-300">
@@ -300,7 +300,7 @@
     <!-- Core Scripts -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
-    <script src="https://clientarea.protradingoptions.com/dash2/libs/sweetalert/sweetalert.min.js"></script>
+    <script src="dash2/libs/sweetalert/sweetalert.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.21/af-2.3.5/b-1.6.3/b-flash-1.6.3/b-html5-1.6.3/b-print-1.6.3/r-2.2.5/datatables.min.js"></script>
 <script>
         lucide.createIcons();

@@ -100,7 +100,7 @@ include('header.php');
                 </h2>
             </div>
             <div class="p-5">
-                <form method="post" action="https://clientarea.protradingoptions.com/sendcontact" class="space-y-4">
+                <form method="post" action="sendcontact" class="space-y-4">
                     <input type="hidden" name="name" value="<?php echo $user['name']; ?>" />
                     <input type="hidden" name="email" value="<?php echo $user['email']; ?>">
                     

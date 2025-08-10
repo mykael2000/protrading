@@ -326,7 +326,7 @@ require('header.php');
                 <div class="mb-4">
                     <label class="block text-xs sm:text-sm dark:text-gray-400 text-gray-600 mb-2">Your Referral Link</label>
                     <div class="flex dark:bg-dark-100 bg-light-200 rounded-lg overflow-hidden">
-                        <input type="text" id="reflink" value="https://clientarea.protradingoptions.com/ref/Mykaeltech" readonly class="flex-1 dark:bg-transparent bg-transparent border-0 px-2 sm:px-3 py-2 text-xs sm:text-sm dark:text-gray-300 text-gray-700 focus:outline-none truncate" />
+                        <input type="text" id="reflink" value="ref/Mykaeltech" readonly class="flex-1 dark:bg-transparent bg-transparent border-0 px-2 sm:px-3 py-2 text-xs sm:text-sm dark:text-gray-300 text-gray-700 focus:outline-none truncate" />
                         <button onclick="copyRefLink()" class="bg-primary text-white px-2 sm:px-3 py-2 text-xs sm:text-sm font-medium hover:bg-primary/90 transition-colors flex items-center gap-1">
                             <i data-lucide="copy" class="h-3 w-3 sm:h-4 sm:w-4"></i>
                             <span>Copy</span>

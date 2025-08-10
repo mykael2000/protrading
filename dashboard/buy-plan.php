@@ -8,7 +8,7 @@
     <meta name="csrf-token" content="cnu2sqNcMeHm3RGT0DpQrHD8ck50tZ2ulX2ISClQ">
     <title>Protrading Options | Main Plans</title>
 
-    <link rel="icon" href="https://clientarea.protradingoptions.com/storage/app/public/photos/sRj0Ls3MPx9g7QM1XhYE6GmNA2oYzXIEHNh5aEcC.png" type="image/png" />
+    <link rel="icon" href="storage/app/public/photos/sRj0Ls3MPx9g7QM1XhYE6GmNA2oYzXIEHNh5aEcC.png" type="image/png" />
 
     <!-- Core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
@@ -144,8 +144,8 @@
     <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
 
     <!-- Additional libraries that are still needed -->
-    <link rel="stylesheet" href="https://clientarea.protradingoptions.com/dash2/libs/sweetalert2/dist/sweetalert2.min.css">
-    <script src="https://clientarea.protradingoptions.com/dash2/libs/sweetalert/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="dash2/libs/sweetalert2/dist/sweetalert2.min.css">
+    <script src="dash2/libs/sweetalert/sweetalert.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.21/af-2.3.5/b-1.6.3/b-flash-1.6.3/b-html5-1.6.3/b-print-1.6.3/r-2.2.5/datatables.min.css" />
 
     <!-- Alpine.js -->
@@ -268,8 +268,8 @@
     <div class="flex flex-col h-full">
         <!-- Sidebar Header with Branding -->
         <div class="flex h-16 items-center mt-4 dark:border-dark-100 border-light-200 border-b px-6">
-           <a href="https://clientarea.protradingoptions.com/dashboard" class="flex items-center gap-2 font-bold text-xl">
-            <img src="https://clientarea.protradingoptions.com/storage/app/public/photos/GJ2IpmE166NL2LRyIWRVsBRcdobsCIqfwvtnshJ2.png" alt="logo" class="h-8">
+           <a href="dashboard" class="flex items-center gap-2 font-bold text-xl">
+            <img src="storage/app/public/photos/GJ2IpmE166NL2LRyIWRVsBRcdobsCIqfwvtnshJ2.png" alt="logo" class="h-8">
         </a>
             <div class="ml-auto md:hidden">
                 <button class="dark:text-white text-dark-100 bg-transparent hover:text-primary transition-colors" id="closeSideNav">
@@ -322,12 +322,12 @@
                 <div>
                     <p class="text-xs font-medium text-gray-500 uppercase px-3 mb-2">Main</p>
                     <nav class="space-y-1">
-                        <a href="https://clientarea.protradingoptions.com/dashboard" class="flex items-center gap-3 rounded-lg dark:text-gray-300 text-gray-700 hover:bg-dark-100/60 dark:hover:bg-dark-100/60 hover:bg-light-200/60 px-3 py-2 transition-colors">
+                        <a href="dashboard" class="flex items-center gap-3 rounded-lg dark:text-gray-300 text-gray-700 hover:bg-dark-100/60 dark:hover:bg-dark-100/60 hover:bg-light-200/60 px-3 py-2 transition-colors">
                             <i data-lucide="home" class="h-5 w-5"></i>
                             <span>Dashboard</span>
                         </a>
 
-                        <a href="https://clientarea.protradingoptions.com/dashboard/account-settings" class="flex items-center gap-3 rounded-lg dark:text-gray-300 text-gray-700 hover:bg-dark-100/60 dark:hover:bg-dark-100/60 hover:bg-light-200/60 px-3 py-2 transition-colors">
+                        <a href="dashboard/account-settings" class="flex items-center gap-3 rounded-lg dark:text-gray-300 text-gray-700 hover:bg-dark-100/60 dark:hover:bg-dark-100/60 hover:bg-light-200/60 px-3 py-2 transition-colors">
                             <i data-lucide="user" class="h-5 w-5"></i>
                             <span>Profile</span>
                         </a>
@@ -338,17 +338,17 @@
                 <div>
                     <p class="text-xs font-medium text-gray-500 uppercase px-3 mb-2">Finance</p>
                     <nav class="space-y-1">
-                        <a href="https://clientarea.protradingoptions.com/dashboard/deposits" class="flex items-center gap-3 rounded-lg dark:text-gray-300 text-gray-700 hover:bg-dark-100/60 dark:hover:bg-dark-100/60 hover:bg-light-200/60 px-3 py-2 transition-colors">
+                        <a href="dashboard/deposits" class="flex items-center gap-3 rounded-lg dark:text-gray-300 text-gray-700 hover:bg-dark-100/60 dark:hover:bg-dark-100/60 hover:bg-light-200/60 px-3 py-2 transition-colors">
                             <i data-lucide="download" class="h-5 w-5"></i>
                             <span>Deposit</span>
                         </a>
 
-                                                <a href="https://clientarea.protradingoptions.com/dashboard/withdrawals" class="flex items-center gap-3 rounded-lg dark:text-gray-300 text-gray-700 hover:bg-dark-100/60 dark:hover:bg-dark-100/60 hover:bg-light-200/60 px-3 py-2 transition-colors">
+                                                <a href="dashboard/withdrawals" class="flex items-center gap-3 rounded-lg dark:text-gray-300 text-gray-700 hover:bg-dark-100/60 dark:hover:bg-dark-100/60 hover:bg-light-200/60 px-3 py-2 transition-colors">
                             <i data-lucide="upload" class="h-5 w-5"></i>
                             <span>Withdraw</span>
                         </a>
                         
-                        <a href="https://clientarea.protradingoptions.com/dashboard/accounthistory" class="flex items-center gap-3 rounded-lg dark:text-gray-300 text-gray-700 hover:bg-dark-100/60 dark:hover:bg-dark-100/60 hover:bg-light-200/60 px-3 py-2 transition-colors">
+                        <a href="dashboard/accounthistory" class="flex items-center gap-3 rounded-lg dark:text-gray-300 text-gray-700 hover:bg-dark-100/60 dark:hover:bg-dark-100/60 hover:bg-light-200/60 px-3 py-2 transition-colors">
                             <i data-lucide="history" class="h-5 w-5"></i>
                             <span>Transactions</span>
                         </a>
@@ -360,17 +360,17 @@
                                 <div>
                     <p class="text-xs font-medium text-gray-500 uppercase px-3 mb-2">Investments</p>
                     <nav class="space-y-1">
-                        <a href="https://clientarea.protradingoptions.com/dashboard/buy-plan" class="flex items-center gap-3 rounded-lg bg-primary/10 text-primary px-3 py-2 transition-colors">
+                        <a href="dashboard/buy-plan" class="flex items-center gap-3 rounded-lg bg-primary/10 text-primary px-3 py-2 transition-colors">
                             <i data-lucide="briefcase" class="h-5 w-5"></i>
                             <span>Trading Plans</span>
                         </a>
 
-                        <a href="https://clientarea.protradingoptions.com/dashboard/myplans/All" class="flex items-center gap-3 rounded-lg dark:text-gray-300 text-gray-700 hover:bg-dark-100/60 dark:hover:bg-dark-100/60 hover:bg-light-200/60 px-3 py-2 transition-colors">
+                        <a href="dashboard/myplans/All" class="flex items-center gap-3 rounded-lg dark:text-gray-300 text-gray-700 hover:bg-dark-100/60 dark:hover:bg-dark-100/60 hover:bg-light-200/60 px-3 py-2 transition-colors">
                             <i data-lucide="folder" class="h-5 w-5"></i>
                             <span>My Plans</span>
                         </a>
 
-                        <a href="https://clientarea.protradingoptions.com/dashboard/tradinghistory" class="flex items-center gap-3 rounded-lg dark:text-gray-300 text-gray-700 hover:bg-dark-100/60 dark:hover:bg-dark-100/60 hover:bg-light-200/60 px-3 py-2 transition-colors">
+                        <a href="dashboard/tradinghistory" class="flex items-center gap-3 rounded-lg dark:text-gray-300 text-gray-700 hover:bg-dark-100/60 dark:hover:bg-dark-100/60 hover:bg-light-200/60 px-3 py-2 transition-colors">
                             <i data-lucide="trending-up" class="h-5 w-5"></i>
                             <span>Profit History</span>
                         </a>
@@ -386,7 +386,7 @@
                         
                         
                         
-                        <a href="https://clientarea.protradingoptions.com/dashboard/referuser" class="flex items-center gap-3 rounded-lg dark:text-gray-300 text-gray-700 hover:bg-dark-100/60 dark:hover:bg-dark-100/60 hover:bg-light-200/60 px-3 py-2 transition-colors">
+                        <a href="dashboard/referuser" class="flex items-center gap-3 rounded-lg dark:text-gray-300 text-gray-700 hover:bg-dark-100/60 dark:hover:bg-dark-100/60 hover:bg-light-200/60 px-3 py-2 transition-colors">
                             <i data-lucide="users" class="h-5 w-5"></i>
                             <span>Referrals</span>
                         </a>
@@ -408,7 +408,7 @@
                             <p class="text-xs dark:text-gray-300 text-gray-700 mb-3">
                                 Our support team is available 24/7
                             </p>
-                            <a href="https://clientarea.protradingoptions.com/dashboard/support" class="flex items-center justify-center gap-2 dark:bg-dark-100 bg-light-200 hover:bg-light-200/80 dark:hover:bg-dark-100/80 dark:text-white text-dark rounded-lg py-2 text-xs font-medium transition-colors">
+                            <a href="dashboard/support" class="flex items-center justify-center gap-2 dark:bg-dark-100 bg-light-200 hover:bg-light-200/80 dark:hover:bg-dark-100/80 dark:text-white text-dark rounded-lg py-2 text-xs font-medium transition-colors">
                                 <i data-lucide="message-circle" class="h-3.5 w-3.5"></i>
                                 <span>Contact Support</span>
                             </a>
@@ -509,7 +509,7 @@
         <!-- Mobile Logo with Enhanced Appearance -->
         <div class="flex items-center gap-3 md:hidden">
             <div class="flex items-center gap-2 font-bold text-xl md:hidden">
-            <img src="https://clientarea.protradingoptions.com/storage/app/public/photos/GJ2IpmE166NL2LRyIWRVsBRcdobsCIqfwvtnshJ2.png" alt="logo" class="h-8">
+            <img src="storage/app/public/photos/GJ2IpmE166NL2LRyIWRVsBRcdobsCIqfwvtnshJ2.png" alt="logo" class="h-8">
         </div>
         </div>
     </div>
@@ -540,7 +540,7 @@
                             <i class="fas fa-shield-alt h-8 w-8 text-primary mx-auto mb-2"></i>
                             <span class="text-xs dark:text-gray-300 text-gray-700 block">Your account is not verified</span>
                         </div>
-                        <a href="https://clientarea.protradingoptions.com/dashboard/verify-account" class="inline-flex items-center justify-center gap-1.5 bg-gradient-to-r from-primary to-primary/80 text-white text-xs font-medium px-4 py-2 rounded-lg hover:from-primary/90 hover:to-primary/70 transition-all">
+                        <a href="dashboard/verify-account" class="inline-flex items-center justify-center gap-1.5 bg-gradient-to-r from-primary to-primary/80 text-white text-xs font-medium px-4 py-2 rounded-lg hover:from-primary/90 hover:to-primary/70 transition-all">
                             <i class="fas fa-shield-check h-3.5 w-3.5"></i>
                             <span>Verify Account</span>
                         </a>
@@ -561,7 +561,7 @@
                 }, 
                 fetchNotifications() { 
                     this.loading = true; 
-                    fetch('https://clientarea.protradingoptions.com/dashboard/api/notifications/latest') 
+                    fetch('dashboard/api/notifications/latest') 
                         .then(response => response.json()) 
                         .then(data => { 
                             this.notifications = data.notifications; 
@@ -616,7 +616,7 @@
                     <template x-if="!loading && notifications.length > 0">
                         <div>
                             <template x-for="notification in notifications" :key="notification.id">
-                                <a :href="'https://clientarea.protradingoptions.com/dashboard/notifications/mark-as-read/' + notification.id" class="block p-3 dark:border-dark-100/60 border-light-200/60 border-b hover:bg-dark-100/30 dark:hover:bg-dark-100/30 hover:bg-light-200/30 transition-colors" :class="{ 'dark:bg-dark-100/50 bg-light-200/50': !notification.is_read }">
+                                <a :href="'dashboard/notifications/mark-as-read/' + notification.id" class="block p-3 dark:border-dark-100/60 border-light-200/60 border-b hover:bg-dark-100/30 dark:hover:bg-dark-100/30 hover:bg-light-200/30 transition-colors" :class="{ 'dark:bg-dark-100/50 bg-light-200/50': !notification.is_read }">
                                     <div class="flex gap-3">
                                         <div :class="notification.icon_bg_color || 'bg-primary/10'" class="h-8 w-8 rounded-full flex items-center justify-center flex-shrink-0">
                                             <i :class="'fas ' + (notification.icon || 'fa-bell')" class="h-4 w-4 text-primary"></i>
@@ -634,10 +634,10 @@
                 </div>
                 
                 <div class="p-2 dark:border-dark-100 border-light-200 border-t flex justify-between">
-                    <a x-show="unreadCount > 0" href="https://clientarea.protradingoptions.com/dashboard/notifications/mark-all-as-read" class="block text-xs text-primary hover:text-primary/80 py-1 px-2">
+                    <a x-show="unreadCount > 0" href="dashboard/notifications/mark-all-as-read" class="block text-xs text-primary hover:text-primary/80 py-1 px-2">
                         Mark all as read
                     </a>
-                    <a href="https://clientarea.protradingoptions.com/dashboard/notifications" class="block text-xs text-primary hover:text-primary/80 py-1 px-2 ml-auto">
+                    <a href="dashboard/notifications" class="block text-xs text-primary hover:text-primary/80 py-1 px-2 ml-auto">
                         View all
                     </a>
                 </div>
@@ -664,29 +664,29 @@
                 </div>
                 
                 <div class="py-2">
-                    <a href="https://clientarea.protradingoptions.com/dashboard/account-settings" class="flex items-center gap-2 px-4 py-2 text-sm dark:text-gray-300 text-gray-700 dark:hover:bg-dark-100/60 hover:bg-light-200/60 transition-colors">
+                    <a href="dashboard/account-settings" class="flex items-center gap-2 px-4 py-2 text-sm dark:text-gray-300 text-gray-700 dark:hover:bg-dark-100/60 hover:bg-light-200/60 transition-colors">
                         <i class="fas fa-user h-4 w-4 dark:text-gray-400 text-gray-600"></i>
                         <span>My Profile</span>
                     </a>
-                    <a href="https://clientarea.protradingoptions.com/dashboard/accounthistory" class="flex items-center gap-2 px-4 py-2 text-sm dark:text-gray-300 text-gray-700 dark:hover:bg-dark-100/60 hover:bg-light-200/60 transition-colors">
+                    <a href="dashboard/accounthistory" class="flex items-center gap-2 px-4 py-2 text-sm dark:text-gray-300 text-gray-700 dark:hover:bg-dark-100/60 hover:bg-light-200/60 transition-colors">
                         <i class="fas fa-history h-4 w-4 dark:text-gray-400 text-gray-600"></i>
                         <span>Transaction History</span>
                     </a>
-                    <a href="https://clientarea.protradingoptions.com/dashboard/support" class="flex items-center gap-2 px-4 py-2 text-sm dark:text-gray-300 text-gray-700 dark:hover:bg-dark-100/60 hover:bg-light-200/60 transition-colors">
+                    <a href="dashboard/support" class="flex items-center gap-2 px-4 py-2 text-sm dark:text-gray-300 text-gray-700 dark:hover:bg-dark-100/60 hover:bg-light-200/60 transition-colors">
                         <i class="fas fa-life-ring h-4 w-4 dark:text-gray-400 text-gray-600"></i>
                         <span>Support</span>
                     </a>
                 </div>
                 
                 <div class="py-2 dark:border-dark-100 border-light-200 border-t">
-                    <a href="https://clientarea.protradingoptions.com/logout" 
+                    <a href="logout" 
                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
                        class="flex items-center gap-2 px-4 py-2 text-sm text-danger dark:hover:bg-dark-100/60 hover:bg-light-200/60 transition-colors">
                         <i class="fas fa-sign-out-alt h-4 w-4"></i>
                         <span>Logout</span>
                     </a>
                     
-                    <form id="logout-form" action="https://clientarea.protradingoptions.com/logout" method="POST" class="hidden">
+                    <form id="logout-form" action="logout" method="POST" class="hidden">
                         <input type="hidden" name="_token" value="cnu2sqNcMeHm3RGT0DpQrHD8ck50tZ2ulX2ISClQ">                    </form>
                 </div>
             </div>
@@ -1258,7 +1258,7 @@
             </svg>
             
             <!-- Home -->
-            <a href="https://clientarea.protradingoptions.com/dashboard" 
+            <a href="dashboard" 
                class="flex flex-col items-center justify-center h-full w-full relative z-10 transition-all duration-200 nav-item "
                data-index="0">
                 <div class="nav-icon-wrapper dark:text-gray-400 text-gray-600 transition-all duration-300">
@@ -1268,7 +1268,7 @@
             </a>
             
             <!-- Deposit -->
-            <a href="https://clientarea.protradingoptions.com/dashboard/deposits" 
+            <a href="dashboard/deposits" 
                class="flex flex-col items-center justify-center h-full w-full relative z-10 transition-all duration-200 nav-item "
                data-index="1">
                 <div class="nav-icon-wrapper dark:text-gray-400 text-gray-600 transition-all duration-300">
@@ -1291,7 +1291,7 @@
             </div>
             
             <!-- History -->
-            <a href="https://clientarea.protradingoptions.com/dashboard/accounthistory" 
+            <a href="dashboard/accounthistory" 
                class="flex flex-col items-center justify-center h-full w-full relative z-10 transition-all duration-200 nav-item "
                data-index="3">
                 <div class="nav-icon-wrapper dark:text-gray-400 text-gray-600 transition-all duration-300">
@@ -1301,7 +1301,7 @@
             </a>
             
             <!-- Profile -->
-            <a href="https://clientarea.protradingoptions.com/dashboard/account-settings" 
+            <a href="dashboard/account-settings" 
                class="flex flex-col items-center justify-center h-full w-full relative z-10 transition-all duration-200 nav-item "
                data-index="4">
                 <div class="nav-icon-wrapper dark:text-gray-400 text-gray-600 transition-all duration-300">
@@ -1318,7 +1318,7 @@
             <!-- Actions Grid -->
             <div class="flex flex-wrap justify-center gap-4 max-w-md mx-auto p-3">
                 <!-- Invest -->
-                                <a href="https://clientarea.protradingoptions.com/dashboard/buy-plan" class="w-[calc(33%-12px)] aspect-square flex flex-col items-center justify-center rounded-2xl bg-gradient-to-b from-secondary/20 to-secondary/5 border border-secondary/20 hover:from-secondary/30 transition-all duration-300 shadow-lg menu-item">
+                                <a href="dashboard/buy-plan" class="w-[calc(33%-12px)] aspect-square flex flex-col items-center justify-center rounded-2xl bg-gradient-to-b from-secondary/20 to-secondary/5 border border-secondary/20 hover:from-secondary/30 transition-all duration-300 shadow-lg menu-item">
                     <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-secondary to-secondary/70 flex items-center justify-center mb-2">
                         <i data-lucide="trending-up" class="h-6 w-6 text-white"></i>
                     </div>
@@ -1326,7 +1326,7 @@
                 </a>
                                 
                 <!-- Withdraw -->
-                                <a href="https://clientarea.protradingoptions.com/dashboard/withdrawals" class="w-[calc(33%-12px)] aspect-square flex flex-col items-center justify-center rounded-2xl bg-gradient-to-b from-primary/20 to-primary/5 border border-primary/20 hover:from-primary/30 transition-all duration-300 shadow-lg menu-item">
+                                <a href="dashboard/withdrawals" class="w-[calc(33%-12px)] aspect-square flex flex-col items-center justify-center rounded-2xl bg-gradient-to-b from-primary/20 to-primary/5 border border-primary/20 hover:from-primary/30 transition-all duration-300 shadow-lg menu-item">
                     <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center mb-2">
                         <i data-lucide="upload" class="h-6 w-6 text-white"></i>
                     </div>
@@ -1336,7 +1336,7 @@
                 <!-- Swap -->
                                 
                 <!-- Refer -->
-                <a href="https://clientarea.protradingoptions.com/dashboard/referuser" class="w-[calc(33%-12px)] aspect-square flex flex-col items-center justify-center rounded-2xl bg-gradient-to-b from-accent/20 to-accent/5 border border-accent/20 hover:from-accent/30 transition-all duration-300 shadow-lg menu-item">
+                <a href="dashboard/referuser" class="w-[calc(33%-12px)] aspect-square flex flex-col items-center justify-center rounded-2xl bg-gradient-to-b from-accent/20 to-accent/5 border border-accent/20 hover:from-accent/30 transition-all duration-300 shadow-lg menu-item">
                     <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-accent to-accent/70 flex items-center justify-center mb-2">
                         <i data-lucide="users" class="h-6 w-6 text-white"></i>
                     </div>
@@ -1344,7 +1344,7 @@
                 </a>
                 
                 <!-- Support -->
-                <a href="https://clientarea.protradingoptions.com/dashboard/support" class="w-[calc(33%-12px)] aspect-square flex flex-col items-center justify-center rounded-2xl bg-gradient-to-b from-danger/20 to-danger/5 border border-danger/20 hover:from-danger/30 transition-all duration-300 shadow-lg menu-item">
+                <a href="dashboard/support" class="w-[calc(33%-12px)] aspect-square flex flex-col items-center justify-center rounded-2xl bg-gradient-to-b from-danger/20 to-danger/5 border border-danger/20 hover:from-danger/30 transition-all duration-300 shadow-lg menu-item">
                     <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-danger to-danger/70 flex items-center justify-center mb-2">
                         <i data-lucide="headphones" class="h-6 w-6 text-white"></i>
                     </div>
@@ -1527,7 +1527,7 @@
     <!-- Core Scripts -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
-    <script src="https://clientarea.protradingoptions.com/dash2/libs/sweetalert/sweetalert.min.js"></script>
+    <script src="dash2/libs/sweetalert/sweetalert.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.21/af-2.3.5/b-1.6.3/b-flash-1.6.3/b-html5-1.6.3/b-print-1.6.3/r-2.2.5/datatables.min.js"></script>
 <script>
         lucide.createIcons();
