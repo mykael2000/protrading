@@ -35,7 +35,7 @@ include('header.php');
                         </div>
                         <div>
                             <p class="text-xs text-dark-300 dark:text-light-300">Account</p>
-                            <p class="text-base font-bold text-dark dark:text-white">Michael Oshiomokhai Erameh</p>
+                            <p class="text-base font-bold text-dark dark:text-white"><?php echo $user['name']; ?></p>
                         </div>
                     </div>
                 </div>
@@ -111,17 +111,17 @@ include('header.php');
                 <input type="hidden" name="_token" value="cnu2sqNcMeHm3RGT0DpQrHD8ck50tZ2ulX2ISClQ">                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div class="space-y-2">
                         <label for="name" class="block text-sm font-medium text-dark dark:text-white">Full Name</label>
-                        <input type="text" id="name" name="name" value="Michael Oshiomokhai Erameh" class="w-full px-4 py-3 rounded-xl bg-light-100 dark:bg-dark-100 border border-light-200 dark:border-dark-200 focus:ring-2 focus:ring-primary focus:border-transparent text-dark dark:text-white transition-all">
+                        <input type="text" id="name" name="name" value="<?php echo $user['name']; ?>" class="w-full px-4 py-3 rounded-xl bg-light-100 dark:bg-dark-100 border border-light-200 dark:border-dark-200 focus:ring-2 focus:ring-primary focus:border-transparent text-dark dark:text-white transition-all">
                     </div>
                     
                     <div class="space-y-2">
                         <label for="email" class="block text-sm font-medium text-dark dark:text-white">Email Address</label>
-                        <input type="email" id="email" name="email" value="eramehmichael2000@gmail.com" class="w-full px-4 py-3 rounded-xl bg-light-50 dark:bg-dark-200 border border-light-200 dark:border-dark-200 text-dark-300 dark:text-light-300 cursor-not-allowed" readonly>
+                        <input type="email" id="email" name="email" value="<?php echo $user['email']; ?>" class="w-full px-4 py-3 rounded-xl bg-light-50 dark:bg-dark-200 border border-light-200 dark:border-dark-200 text-dark-300 dark:text-light-300 cursor-not-allowed" readonly>
                     </div>
                     
                     <div class="space-y-2">
                         <label for="phone" class="block text-sm font-medium text-dark dark:text-white">Phone Number</label>
-                        <input type="text" id="phone" name="phone" value="08092195490" class="w-full px-4 py-3 rounded-xl bg-light-100 dark:bg-dark-100 border border-light-200 dark:border-dark-200 focus:ring-2 focus:ring-primary focus:border-transparent text-dark dark:text-white transition-all">
+                        <input type="text" id="phone" name="phone" value="<?php echo $user['phone']; ?>" class="w-full px-4 py-3 rounded-xl bg-light-100 dark:bg-dark-100 border border-light-200 dark:border-dark-200 focus:ring-2 focus:ring-primary focus:border-transparent text-dark dark:text-white transition-all">
                     </div>
                     
                     <div class="space-y-2">
@@ -131,7 +131,7 @@ include('header.php');
                     
                     <div class="space-y-2">
                         <label for="country" class="block text-sm font-medium text-dark dark:text-white">Country</label>
-                        <input type="text" id="country" name="country" value="Nigeria" class="w-full px-4 py-3 rounded-xl bg-light-50 dark:bg-dark-200 border border-light-200 dark:border-dark-200 text-dark-300 dark:text-light-300 cursor-not-allowed" readonly>
+                        <input type="text" id="country" name="country" value="<?php echo $user['country']; ?>" class="w-full px-4 py-3 rounded-xl bg-light-50 dark:bg-dark-200 border border-light-200 dark:border-dark-200 text-dark-300 dark:text-light-300 cursor-not-allowed" readonly>
                     </div>
                     
                     <div class="space-y-2">

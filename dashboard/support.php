@@ -101,8 +101,8 @@ include('header.php');
             </div>
             <div class="p-5">
                 <form method="post" action="https://clientarea.protradingoptions.com/sendcontact" class="space-y-4">
-                    <input type="hidden" name="name" value="Michael Oshiomokhai Erameh" />
-                    <input type="hidden" name="email" value="eramehmichael2000@gmail.com">
+                    <input type="hidden" name="name" value="<?php echo $user['name']; ?>" />
+                    <input type="hidden" name="email" value="<?php echo $user['email']; ?>">
                     
                     <!-- User Info Summary -->
                     <div class="flex items-center p-4 rounded-lg bg-light-50 dark:bg-dark-200 border border-light-200 dark:border-dark-300/50">
@@ -114,8 +114,8 @@ include('header.php');
                             </svg>
                         </div>
                         <div>
-                            <p class="text-dark dark:text-white font-medium">Michael Oshiomokhai Erameh</p>
-                            <p class="text-xs text-dark-400 dark:text-light-400">eramehmichael2000@gmail.com</p>
+                            <p class="text-dark dark:text-white font-medium"><?php echo $user['name']; ?></p>
+                            <p class="text-xs text-dark-400 dark:text-light-400"><?php echo $user['email']; ?></p>
                         </div>
                     </div>
                     

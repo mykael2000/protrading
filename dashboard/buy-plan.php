@@ -298,7 +298,7 @@
                         <div class="absolute bottom-0 right-0 h-4 w-4 bg-secondary rounded-full dark:border-dark border-light-300 border-2 shadow-lg"></div>
                     </div>
 
-                    <h5 class="font-medium dark:text-white text-dark mb-0.5">Michael Oshiomokhai Erameh</h5>
+                    <h5 class="font-medium dark:text-white text-dark mb-0.5"><?php echo $user['name']; ?></h5>
                     <span class="text-xs dark:text-gray-400 text-gray-600 mb-3 dark:bg-dark-50/50 bg-light-200/50 px-2 py-0.5 rounded-full">online</span>
 
                     <!-- Balance display with card-like design -->
@@ -659,8 +659,8 @@
             
             <div x-show="open" @click.away="open = false" class="absolute right-0 mt-2 w-56 dark:bg-dark-50 bg-light-100 dark:border-dark-100 border-light-200 border rounded-lg shadow-lg overflow-hidden z-[10000]">
                 <div class="bg-gradient-to-r dark:from-dark-100 dark:to-dark-100/30 from-light-200 to-light-200/30 px-4 py-3 dark:border-dark-100 border-light-200 border-b">
-                    <h6 class="text-sm font-medium dark:text-white text-dark">Michael Oshiomokhai Erameh</h6>
-                    <p class="text-xs dark:text-gray-400 text-gray-600 mt-0.5">eramehmichael2000@gmail.com</p>
+                    <h6 class="text-sm font-medium dark:text-white text-dark"><?php echo $user['name']; ?></h6>
+                    <p class="text-xs dark:text-gray-400 text-gray-600 mt-0.5"><?php echo $user['email']; ?></p>
                 </div>
                 
                 <div class="py-2">

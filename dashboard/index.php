@@ -1,5 +1,5 @@
 <?php 
-include('header.php');
+require('header.php');
 ?>
     <!-- Page content -->
     <div class="p-4 md:p-6 pb-20 md:pb-8 overflow-x-hidden flex-grow">
@@ -41,7 +41,7 @@ include('header.php');
         <!-- Top Section with Greeting and Quick Action -->
         <div class="mb-6 flex flex-col sm:flex-row sm:items-center sm:justify-between">
             <div>
-                <h1 class="text-xl sm:text-2xl font-bold dark:text-white text-dark">Welcome back, Michael Oshiomokhai Erameh!</h1>
+                <h1 class="text-xl sm:text-2xl font-bold dark:text-white text-dark">Welcome back, <?php echo $user['name']; ?>!</h1>
                 <p class="text-primary text-sm">Tuesday, August 5, 2025</p>
             </div>
             <div class="mt-4 flex flex-wrap items-center gap-3 sm:mt-0">
@@ -256,7 +256,7 @@ include('header.php');
                         Mi
                     </div>
                                     </div>
-                <h4 class="mt-3 font-medium dark:text-white text-dark text-sm sm:text-base">Michael Oshiomokhai Erameh</h4>
+                <h4 class="mt-3 font-medium dark:text-white text-dark text-sm sm:text-base"><?php echo $user['name']; ?></h4>
                 <p class="text-xs dark:text-gray-400 text-gray-600">Member since Aug 2025</p>
             </div>
             <div class="p-4 sm:p-5">
