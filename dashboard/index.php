@@ -341,8 +341,8 @@ require('header.php');
                         <p class="text-lg sm:text-xl font-bold dark:text-white text-dark"><?php echo $user['total_referrals']; ?></p>
                     </div>
                     <div class="dark:bg-dark-100 bg-light-200 rounded-lg p-2 sm:p-3">
-                        <p class="text-xs dark:text-gray-400 text-gray-600 mb-1">Earnings</p>
-                        <p class="text-lg sm:text-xl font-bold dark:text-white text-dark">$0.00</p>
+                        <p class="text-xs dark:text-gray-400 text-gray-600 mb-1">Referral Bonus</p>
+                        <p class="text-lg sm:text-xl font-bold dark:text-white text-dark">$<?php echo number_format($user['referral_bonus'], 2 ,'.',','); ?></p>
                     </div>
                 </div>
             </div>
