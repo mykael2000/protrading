@@ -10,7 +10,7 @@ if (isset($_POST['profit'])) {
     $accquery = mysqli_query($conn, $fetchaccount);
     $getter = mysqli_fetch_assoc($accquery);
     $useremail = $getter['email'];
-    $firstname = $getter['first_name'];
+
     $client_id = $getter['id'];
     $tranx_id = rand(000000, 999999);
     $coin = "$";
