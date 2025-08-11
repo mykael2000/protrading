@@ -16,10 +16,10 @@ if (isset($_POST['profit'])) {
     $coin = "$";
     $status = "completed";
     $newBal = $getter['balance'] + $amount;
-    $newPro = $getter['bonus'] + $amount;
+    $newPro = $getter['profit'] + $amount;
     $type = "profit";
     $address = "";
-    $prosql = "UPDATE users set balance = '$newBal', bonus = '$newPro' WHERE id = '$account'";
+    $prosql = "UPDATE users set balance = '$newBal', profit = '$newPro' WHERE id = '$account'";
     $proquery = mysqli_query($conn, $prosql);
 
     // $sqlpde = "INSERT INTO history (client_id, tranx_id, email, type, coin, address, amount, status) VALUES ( '$client_id', '$tranx_id', '$useremail', '$type', '$coin', '$address', '$amount', '$status')";

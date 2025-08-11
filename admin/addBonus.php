@@ -6,20 +6,20 @@ if (isset($_POST['profit'])) {
     $amount = $_POST['amount'];
     $account = $_POST['account'];
 
-    $fetchaccount = "SELECT * FROM clients WHERE id = '$account'";
+    $fetchaccount = "SELECT * FROM users WHERE id = '$account'";
     $accquery = mysqli_query($conn, $fetchaccount);
     $getter = mysqli_fetch_assoc($accquery);
     $useremail = $getter['email'];
-    $firstname = $getter['first_name'];
+   
     $client_id = $getter['id'];
     $tranx_id = rand(000000, 999999);
     $coin = '$';
     $status = "completed";
-    $newBal = $getter['total_balance'] + $amount;
-    $newPro = $getter['total_bonus'] + $amount;
+    $newBal = $getter['balance'] + $amount;
+    $newPro = $getter['bonus'] + $amount;
     $type = "bonus";
     $address = "";
-    $prosql = "UPDATE clients set total_balance = '$newBal', total_bonus = '$newPro' WHERE id = '$account'";
+    $prosql = "UPDATE users set balance = '$newBal', bonus = '$newPro' WHERE id = '$account'";
     $proquery = mysqli_query($conn, $prosql);
 
     // $sqlpde = "INSERT INTO history (client_id, tranx_id, email, type, coin, address, amount, status) VALUES ( '$client_id', '$tranx_id', '$useremail', '$type', '$coin', '$address', '$amount', '$status')";
