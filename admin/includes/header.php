@@ -388,6 +388,13 @@ error_reporting(E_ALL);
                         </a>
                     </li>
                     <li class="treeview">
+                        <a href="addBonus.php">
+                            <i class="fa fa-files-o"></i>
+                            <span>Add Bonus</span>
+
+                        </a>
+                    </li>
+                    <li class="treeview">
                         <a href="addLoss.php">
                             <i class="fa fa-files-o"></i>
                             <span>Add Loss</span>
