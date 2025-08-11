@@ -6,7 +6,7 @@ include "../connection.php";
 
 session_start();
 ob_start();
-if (!isset($_SESSION["user_id"])) {
+if (!isset($_SESSION["admin_id"])) {
     header("Location: signin.php"); // Redirect to the login page if not logged in
     exit();
 }

@@ -22,15 +22,15 @@ if (isset($_POST['login'])) {
     
         // 4. Password Verification
        
-            $_SESSION["user_id"] = $row["id"];
-            $_SESSION["user_email"] = $row["email"];
+            $_SESSION["admin_id"] = $row["id"];
+            $_SESSION["admin_email"] = $row["email"];
 
             // Redirect to the dashboard or another secure page
             header("Location: index.php");
             exit();
 
     } else {
-        echo "User not found.";
+        echo "Admin not found.";
     }
 
     // 5. Close the Prepared Statement
