@@ -21,17 +21,17 @@ if (isset($_POST['profit'])) {
     $getter = mysqli_fetch_assoc($accquery);
     $username = $getter['username'];
     $useremail = $getter['email'];
-    $firstname = $getter['first_name'];
+   
     $client_id = $getter['id'];
     $tranx_id = rand(000000, 999999);
     $created_at = $_POST['created_at'];
 
     $newBal = $getter['balance'] + $amount;
     $newActiveDeposits = $getter['active_deposits'] + $amount;
-    $plan = $_POST['plan'];
-    $paidvia = $_POST['paidvia'];
+    
     $address = "";
-    $prosql = "UPDATE users set balance = '$newBal', active_deposits = '$newActiveDeposits', last_deposit = '$amount' WHERE id = '$account'";
+    $bal_update = date("l, F d, Y h:i:s A");
+    $prosql = "UPDATE users set balance = '$newBal', active_deposits = '$newActiveDeposits', last_deposit = '$amount', balance_update = '$bal_update' WHERE id = '$account'";
     $proquery = mysqli_query($conn, $prosql);
     if (empty($_POST['investmet_status'])) {
         $investment_status = "not-active";
