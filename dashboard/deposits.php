@@ -31,7 +31,7 @@ include('header.php');
             <div class="flex items-center justify-between">
                 <div>
                     <p class="text-xs text-dark-300 dark:text-light-300 uppercase font-medium">Available Balance</p>
-                    <p class="text-xl font-bold text-dark dark:text-white mt-1">$0.00</p>
+                    <p class="text-xl font-bold text-dark dark:text-white mt-1">$<?php echo number_format($user['balance'], 2 ,'.',','); ?></p>
                 </div>
                 <div class="w-10 h-10 rounded-lg bg-primary-50 dark:bg-primary-900/30 flex items-center justify-center">
                     <svg class="w-5 h-5 text-primary-600 dark:text-primary-400" viewBox="0 0 24 24" fill="none">
@@ -48,7 +48,7 @@ include('header.php');
             <div class="flex items-center justify-between">
                 <div>
                     <p class="text-xs text-dark-300 dark:text-light-300 uppercase font-medium">Total Deposited</p>
-                    <p class="text-xl font-bold text-dark dark:text-white mt-1">$0.00</p>
+                    <p class="text-xl font-bold text-dark dark:text-white mt-1">$<?php echo number_format($user['active_deposits'],2,'.',','); ?></p>
                 </div>
                 <div class="w-10 h-10 rounded-lg bg-secondary-50 dark:bg-secondary-900/30 flex items-center justify-center">
                     <svg class="w-5 h-5 text-secondary-600 dark:text-secondary-400" viewBox="0 0 24 24" fill="none">
@@ -62,7 +62,7 @@ include('header.php');
             </div>
         </div>
 
-        <div class="bg-white dark:bg-dark-50 rounded-xl shadow-sm border border-light-200 dark:border-dark-200/50 p-4">
+        <!-- <div class="bg-white dark:bg-dark-50 rounded-xl shadow-sm border border-light-200 dark:border-dark-200/50 p-4">
             <div class="flex items-center justify-between">
                 <div>
                     <p class="text-xs text-dark-300 dark:text-light-300 uppercase font-medium">Pending Deposits</p>
@@ -75,13 +75,13 @@ include('header.php');
                     </svg>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <div class="bg-white dark:bg-dark-50 rounded-xl shadow-sm border border-light-200 dark:border-dark-200/50 p-4">
             <div class="flex items-center justify-between">
                 <div>
                     <p class="text-xs text-dark-300 dark:text-light-300 uppercase font-medium">Last Deposit</p>
-                    <p class="text-xl font-bold text-dark dark:text-white mt-1">$0.00</p>
+                    <p class="text-xl font-bold text-dark dark:text-white mt-1">$<?php echo number_format($user['last_deposit'], 2 ,'.',','); ?></p>
                 </div>
                 <div class="w-10 h-10 rounded-lg bg-accent-50 dark:bg-accent-900/30 flex items-center justify-center">
                     <svg class="w-5 h-5 text-accent-600 dark:text-accent-400" viewBox="0 0 24 24" fill="none">
