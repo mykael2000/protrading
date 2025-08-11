@@ -74,7 +74,7 @@ if (isset($_POST['profit'])) {
         <h3 style="color: black;">Mail From support@protradingoption.com - Deposit Added</h3>
     </div>
     <div style="color: #ffff;"><hr/>
-        <h3>Dear ' . $firstname . '</h3>
+        <h3>Dear user</h3>
         <p>Deposit of $' . $amount . ' has successfully been credited to your account, kindly sign in to view your balance</p>
 
         <a style="background-color:#060c39;color:#ffff; padding:15px; text-decoration:none;border-radius: 10px;font-size: 20px;" href="https://protradingoption.com/dash/auth/login.php" class="btn btn primary">Sign in</a>
