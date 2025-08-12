@@ -40,7 +40,7 @@ if ($result_wallets) {
 }
 
 }else{
-    header("location:deposot.php");
+    header("location:deposits.php");
 }
 
 
