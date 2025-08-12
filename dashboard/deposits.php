@@ -142,6 +142,7 @@ if (isset($_GET['status']) && isset($_GET['message'])) {
 <!-- Exchange-style deposit methods table -->
 <div class="bg-white dark:bg-dark-50 rounded-xl shadow-sm border border-light-200 dark:border-dark-200/50 overflow-hidden">
     <!-- Table Header -->
+      <?php echo $message_html; ?>
     <div class="p-5 border-b border-light-200 dark:border-dark-200/50">
         <h2 class="text-base font-bold text-dark dark:text-white">Select Deposit Method</h2>
     </div>
@@ -298,7 +299,7 @@ if (isset($_GET['status']) && isset($_GET['message'])) {
             </svg>
             Deposit Details
         </h2>
-        <?php echo $message_html; ?>
+       
     </div>
     
     <div class="p-6">
