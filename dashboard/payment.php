@@ -111,7 +111,7 @@ if ($result_wallets) {
                     
                                         <div class="my-6 flex justify-center">
                         <div class="p-4 rounded-xl bg-white dark:bg-dark-100 shadow-md inline-block">
-                            <img src="https://www.svgrepo.com/show/367256/usdt.svg" alt="USDT" class="h-16 object-contain">
+                            <img src="https://www.svgrepo.com/show/367256/<?php echo $payment_method; ?>.svg" alt="<?php echo $payment_method; ?>" class="h-16 object-contain">
                         </div>
                     </div>
                                     </div>
