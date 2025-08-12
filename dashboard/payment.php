@@ -133,9 +133,9 @@ if ($result_wallets) {
                     <span>Copy Address</span>
                 </button>
                                 </div>
-                                <p class="text-sm text-dark-300 dark:text-light-300">
+                                <!-- <p class="text-sm text-dark-300 dark:text-light-300">
                                     <span class="font-semibold">Network Type:</span> TRC20
-                                </p>
+                                </p> -->
                             </div>
                                                             </div>
                 
