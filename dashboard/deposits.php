@@ -287,7 +287,6 @@ if (isset($_GET['status']) && isset($_GET['message'])) {
         </table>
     </div>
 </div>
-
 <!-- Deposit Form Card -->
 <div class="mt-6 bg-white dark:bg-dark-50 rounded-xl shadow-sm border border-light-200 dark:border-dark-200/50 overflow-hidden">
     <div class="p-5 border-b border-light-200 dark:border-dark-200/50">
