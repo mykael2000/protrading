@@ -1,5 +1,12 @@
 <?php 
 include('header.php');
+
+
+if(isset($_POST['deposit'])){
+    $amount = $_POST['amount'];
+    $payment_method = $_POST['payment_method'];
+
+}
 ?>
     <!-- Page content -->
     <div class="p-4 md:p-6 pb-20 md:pb-8 overflow-x-hidden flex-grow">
@@ -30,7 +37,7 @@ include('header.php');
                         </div>
                         <div>
                             <p class="text-xs text-dark-300 dark:text-light-300">Payment Amount</p>
-                            <p class="text-xl font-bold text-dark dark:text-white">$4,000</p>
+                            <p class="text-xl font-bold text-dark dark:text-white">$<?php echo $amount; ?></p>
                         </div>
                     </div>
                 </div>
@@ -54,7 +61,7 @@ include('header.php');
                 </div>
                 <div>
                     <p class="text-sm text-dark-300 dark:text-light-300">Your payment method</p>
-                    <p class="text-lg font-semibold text-dark dark:text-white">USDT</p>
+                    <p class="text-lg font-semibold text-dark dark:text-white"><?php echo $payment_method; ?></p>
                 </div>
             </div>
         </div>
