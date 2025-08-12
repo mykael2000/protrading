@@ -19,7 +19,7 @@ if (isset($_POST['amount'], $_POST['payment_method']) && isset($_FILES['proof'])
         header("location: login.php");
         exit();
     }
-    $user_id = $_SESSION['user_id'];
+    $user_id = $user['user_id'];
 
     // Sanitize and get form data
     $amount = filter_var($_POST['amount'], FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
