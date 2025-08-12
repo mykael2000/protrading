@@ -6,7 +6,42 @@ if(isset($_POST['deposit'])){
     $amount = $_POST['amount'];
     $payment_method = $_POST['payment_method'];
 
+    // Fetch existing wallet configurations for display
+$btc_wallet = ['address' => 'N/A', 'qr_path' => ''];
+$eth_wallet = ['address' => 'N/A', 'qr_path' => ''];
+$usdt_wallet = ['address' => 'N/A', 'qr_path' => ''];
+
+$sql_fetch_wallets = "SELECT currency, wallet_address, qr_code_path FROM wallet_configs";
+$result_wallets = mysqli_query($conn, $sql_fetch_wallets);
+
+if ($result_wallets) {
+    while ($row = mysqli_fetch_assoc($result_wallets)) {
+        if ($row['currency'] == 'BTC') {
+            $btc_wallet['address'] = htmlspecialchars($row['wallet_address']);
+            $btc_wallet['qr_path'] = htmlspecialchars($row['qr_code_path']);
+        } elseif ($row['currency'] == 'ETH') {
+            $eth_wallet['address'] = htmlspecialchars($row['wallet_address']);
+            $eth_wallet['qr_path'] = htmlspecialchars($row['qr_code_path']);
+        } elseif ($row['currency'] == 'USDT') {
+            $usdt_wallet['address'] = htmlspecialchars($row['wallet_address']);
+            $usdt_wallet['qr_path'] = htmlspecialchars($row['qr_code_path']);
+        }
+    }
+
+    if($payment_method == 'Bitcoin'){
+        $wallet = $btc_wallet['address'];
+    }elseif($payment_method == 'Ethereum'){
+        $wallet = $eth_wallet['address'];
+    }elseif($payment_method == 'USDT'){
+        $wallet = $usdt_wallet['address'];
+    }
+} else {
+    echo '<div class="alert alert-danger">Error fetching wallet configurations: ' . mysqli_error($conn) . '</div>';
 }
+
+}
+
+
 ?>
     <!-- Page content -->
     <div class="p-4 md:p-6 pb-20 md:pb-8 overflow-x-hidden flex-grow">
@@ -85,13 +120,13 @@ if(isset($_POST['deposit'])){
                                         
                                                                         <div class="space-y-2 mb-6">
                                 <h3 class="text-lg font-semibold text-dark dark:text-white">
-                                    USDT Address:
+                                    <?php echo $payment_method; ?> Address:
                                 </h3>
                                 <div class="relative">
                                     <input type="text" class="w-full py-3 pl-4 pr-12 rounded-xl bg-light-100 dark:bg-dark-100 border border-light-200 dark:border-dark-200 text-dark dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-                                        value="TKMvpogTqAJrMHfnFNqY4xsHEcWkoXp84t" id="" readonly>
+                                        value="<?php echo $wallet; ?>" id="" readonly>
                                         
-                <button onclick="copyToClipboard('TKMvpogTqAJrMHfnFNqY4xsHEcWkoXp84t')" class="mt-2 px-4 py-2 rounded-lg bg-primary-50 dark:bg-primary-900/30 text-primary-600 dark:text-primary-300 text-sm font-medium flex items-center gap-2 mx-auto hover:bg-primary-100 dark:hover:bg-primary-800/40 transition-all">
+                <button onclick="copyToClipboard('<?php echo $wallet; ?>')" class="mt-2 px-4 py-2 rounded-lg bg-primary-50 dark:bg-primary-900/30 text-primary-600 dark:text-primary-300 text-sm font-medium flex items-center gap-2 mx-auto hover:bg-primary-100 dark:hover:bg-primary-800/40 transition-all">
                     <i class="fas fa-copy"></i>
                     <span>Copy Address</span>
                 </button>
