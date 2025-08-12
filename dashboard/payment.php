@@ -39,6 +39,8 @@ if ($result_wallets) {
     echo '<div class="alert alert-danger">Error fetching wallet configurations: ' . mysqli_error($conn) . '</div>';
 }
 
+}else{
+    header("location:deposot.php");
 }
 
 
