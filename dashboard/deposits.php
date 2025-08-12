@@ -850,14 +850,14 @@ include('header.php');
                 return false;
             } else {
                 // Exactly matching the working version
-                let makepayurl = "newdeposit";
+                let makepayurl = "payment.php";
                 $("#submitpaymentform").attr("action", makepayurl);
                 return true;
             }
         });
         
         // Directly set form action on page load
-        $('#submitpaymentform').attr('action', "newdeposit");
+        $('#submitpaymentform').attr('action', "payment.php");
     });
 </script>
 
