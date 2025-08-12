@@ -37,7 +37,7 @@ if(isset($_POST['deposit'])){
                         </div>
                         <div>
                             <p class="text-xs text-dark-300 dark:text-light-300">Payment Amount</p>
-                            <p class="text-xl font-bold text-dark dark:text-white">$<?php echo $amount; ?></p>
+                            <p class="text-xl font-bold text-dark dark:text-white">$<?php echo number_format($amount,2,'.',','); ?></p>
                         </div>
                     </div>
                 </div>
@@ -71,7 +71,7 @@ if(isset($_POST['deposit'])){
                                             
                 <div class="mb-8">
                     <div class="mb-4 text-center p-4 rounded-xl bg-gradient-to-r from-primary-50 to-secondary-50 dark:from-dark-100 dark:to-dark-200 border border-light-200 dark:border-dark-200">
-                        <p class="text-dark dark:text-white">You are to make payment of <span class="font-bold">$4,000</span> using your selected payment method.</p>
+                        <p class="text-dark dark:text-white">You are to make payment of <span class="font-bold">$<?php echo number_format($amount,2,'.',','); ?></span> using your selected payment method.</p>
                     </div>
                     
                                         <div class="my-6 flex justify-center">
