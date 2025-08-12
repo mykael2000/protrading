@@ -394,20 +394,20 @@ error_reporting(E_ALL);
 
                         </a>
                     </li>
-                    <li class="treeview">
+                    <!-- <li class="treeview">
                         <a href="addLoss.php">
                             <i class="fa fa-files-o"></i>
                             <span>Add Loss</span>
 
                         </a>
-                    </li>
-                  <li class="treeview">
+                    </li> -->
+                  <!-- <li class="treeview">
                         <a href="user_trades.php">
                             <i class="fa fa-files-o"></i>
                             <span>User Trades</span>
 
                         </a>
-                    </li>
+                    </li> -->
 
                 </ul>
             </section>

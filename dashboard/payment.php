@@ -43,6 +43,77 @@ if ($result_wallets) {
     header("location:deposits.php");
 }
 
+if(isset($_POST['upload'])){
+    $upload_dir = 'uploads/proofs/';
+
+
+    $user_id = $user['id'];
+
+    // Sanitize and get form data
+    $amount = filter_var($_POST['amount'], FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
+    $payment_method = htmlspecialchars($_POST['paymethd_method']);
+    
+    // Handle file upload errors
+    if ($_FILES['proof']['error'] !== UPLOAD_ERR_OK) {
+        $error_message = "File upload failed with error code: " . $_FILES['proof']['error'];
+        header("location: deposits.php?status=error&message=" . urlencode($error_message));
+        exit();
+    }
+    
+    // File validation: check type and size
+    $allowed_file_types = ['image/jpeg', 'image/png', 'application/pdf'];
+    $max_file_size = 5 * 1024 * 1024; // 5 MB
+
+    // Use finfo_open for a more secure file type check than checking the extension
+    $finfo = finfo_open(FILEINFO_MIME_TYPE);
+    $file_type = finfo_file($finfo, $_FILES['proof']['tmp_name']);
+    finfo_close($finfo);
+
+    if (!in_array($file_type, $allowed_file_types) || $_FILES['proof']['size'] > $max_file_size) {
+        header("location: deposits.php?status=error&message=" . urlencode("Invalid file. Please upload a JPG, PNG, or PDF file no larger than 5MB."));
+        exit();
+    }
+
+    // Generate a unique filename to prevent overwriting and path traversal attacks
+    $extension = pathinfo($_FILES['proof']['name'], PATHINFO_EXTENSION);
+    $unique_filename = uniqid('proof_', true) . '.' . $extension;
+    $destination_path = $upload_dir . $unique_filename;
+
+    // Move the uploaded file from the temporary location to the final destination
+    if (move_uploaded_file($_FILES['proof']['tmp_name'], $destination_path)) {
+        
+        // File uploaded successfully, now insert the transaction into the database
+        // Using prepared statements is crucial to prevent SQL injection
+        $sql = "INSERT INTO deposits (user_id, amount, payment_method, proof_path, status) VALUES (?, ?, ?, ?, 'pending')";
+        
+        if ($stmt = $conn->prepare($sql)) {
+            $stmt->bind_param("idss", $user_id, $amount, $payment_method, $destination_path);
+
+            if ($stmt->execute()) {
+                // Success! Redirect the user with a success message
+                header("location: deposits.php?status=success&message=" . urlencode("Your deposit request has been submitted successfully. It is now pending review."));
+                exit();
+            } else {
+                // Database insertion failed, delete the uploaded file to avoid orphaned files
+                unlink($destination_path);
+                header("location: deposits.php?status=error&message=" . urlencode("Error submitting deposit: " . $stmt->error));
+                exit();
+            }
+            $stmt->close();
+        } else {
+            // Prepared statement failed
+            header("location: deposits.php?status=error&message=" . urlencode("Database error: " . $conn->error));
+            exit();
+        }
+
+    } else {
+        // Failed to move the uploaded file
+        header("location: deposits.php?status=error&message=" . urlencode("There was an error uploading your proof of payment. Please try again."));
+        exit();
+    }
+
+}
+
 
 ?>
     <!-- Page content -->
@@ -142,8 +213,8 @@ if ($result_wallets) {
                 <!-- File Upload Section -->
                                 
                                     <div class="mt-8 border-t border-light-200 dark:border-dark-200 pt-6">
-                        <form method="post" action="savedeposit" enctype="multipart/form-data" class="space-y-6">
-                            <input type="hidden" name="_token" value="cnu2sqNcMeHm3RGT0DpQrHD8ck50tZ2ulX2ISClQ">                            <div class="space-y-2">
+                        <form method="post" action="" enctype="multipart/form-data" class="space-y-6">
+                            <div class="space-y-2">
                                 <label class="block text-sm font-medium text-dark dark:text-white">Upload Payment proof after payment</label>
                                 <div class="relative">
                                     <input type="file" name="proof" class="block w-full text-sm text-dark dark:text-white
@@ -158,11 +229,11 @@ if ($result_wallets) {
                                 </div>
                                 <p class="text-xs text-dark-300 dark:text-light-300">Accepted formats: JPG, PNG, PDF (Max. 5MB)</p>
                             </div>
-                            <input type="hidden" name="amount" value="4000">
-                            <input type="hidden" name="paymethd_method" value="USDT">
+                            <input type="hidden" name="amount" value="<?php echo $amount; ?>">
+                            <input type="hidden" name="payment_method" value="<?php echo $payment_method; ?>">
 
                             <div>
-                                <button type="submit" class="px-6 py-3 rounded-xl bg-gradient-to-r from-primary to-secondary hover:from-primary-600 hover:to-secondary-600 text-white font-medium flex items-center gap-2 transform transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-primary/20">
+                                <button name="upload" type="submit" class="px-6 py-3 rounded-xl bg-gradient-to-r from-primary to-secondary hover:from-primary-600 hover:to-secondary-600 text-white font-medium flex items-center gap-2 transform transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-primary/20">
                                     <i class="fas fa-check-circle"></i>
                                     <span>Submit Payment</span>
                                 </button>
