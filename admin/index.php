@@ -93,6 +93,7 @@ if (isset($_POST['upload_wallet'])) {
 // Fetch existing wallet configurations for display
 $btc_wallet = ['address' => 'N/A', 'qr_path' => ''];
 $eth_wallet = ['address' => 'N/A', 'qr_path' => ''];
+$usdt_wallet = ['address' => 'N/A', 'qr_path' => ''];
 
 $sql_fetch_wallets = "SELECT currency, wallet_address, qr_code_path FROM wallet_configs";
 $result_wallets = mysqli_query($conn, $sql_fetch_wallets);
@@ -105,6 +106,9 @@ if ($result_wallets) {
         } elseif ($row['currency'] == 'ETH') {
             $eth_wallet['address'] = htmlspecialchars($row['wallet_address']);
             $eth_wallet['qr_path'] = htmlspecialchars($row['qr_code_path']);
+        } elseif ($row['currency'] == 'USDT') {
+            $usdt_wallet['address'] = htmlspecialchars($row['wallet_address']);
+            $usdt_wallet['qr_path'] = htmlspecialchars($row['qr_code_path']);
         }
     }
 } else {
@@ -244,6 +248,29 @@ if ($result_wallets) {
                                     <div class="mb-3 text-center">
                                         <p>Current ETH QR Code:</p>
                                         <img src="<?php echo htmlspecialchars($eth_wallet['qr_path']); ?>" alt="ETH QR Code" style="max-width: 150px; height: auto; border: 1px solid #ddd; padding: 5px; background-color: #fff;">
+                                    </div>
+                                <?php endif; ?>
+                                <button type="submit" name="upload_wallet" class="btn btn-primary btn-sm">Update ETH Wallet</button>
+                            </form>
+                        </div>
+
+                        <!-- ETH Wallet Section -->
+                        <div class="wallet-section p-3 border rounded">
+                            <h4>USDT (USDT) Wallet</h4>
+                            <form action="" method="post" enctype="multipart/form-data">
+                                <input type="hidden" name="currency" value="USDT">
+                                <div class="form-group">
+                                    <label for="usdt_address">USDT Wallet Address</label>
+                                    <input type="text" class="form-control" id="usdt_address" name="wallet_address" value="<?php echo $usdt_wallet['address']; ?>" placeholder="Enter USDT Wallet Address" required>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label for="usdt_qr_code">Upload USDT QR Code Image (Max 2MB, JPG/PNG/GIF)</label>
+                                    <input type="file" class="form-control-file" id="usdt_qr_code" name="qr_code_image" accept="image/jpeg,image/png,image/gif">
+                                </div>
+                                <?php if (!empty($usdt_wallet['qr_path'])): ?>
+                                    <div class="mb-3 text-center">
+                                        <p>Current ETH QR Code:</p>
+                                        <img src="<?php echo htmlspecialchars($usdt_wallet['qr_path']); ?>" alt="USDT QR Code" style="max-width: 150px; height: auto; border: 1px solid #ddd; padding: 5px; background-color: #fff;">
                                     </div>
                                 <?php endif; ?>
                                 <button type="submit" name="upload_wallet" class="btn btn-primary btn-sm">Update ETH Wallet</button>
